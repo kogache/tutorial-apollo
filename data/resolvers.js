@@ -1,4 +1,5 @@
-import { Author, View } from './connectors';
+// import { Author, View } from './connectors';
+import { Author } from './connectors';
 
 const resolvers = {
   Query: {
@@ -6,7 +7,7 @@ const resolvers = {
       return Author.find({ where: args });
     },
     allAuthors(_, args) {
-      return Author,findAll();
+      return Author.findAll();
     }
   },
   Author: {
@@ -18,9 +19,9 @@ const resolvers = {
     author(post) {
       return post.getAuthor();
     },
-    views(post) {
-      return View.findOne({ postId: post.id }).then(view => view.views);
-    }
+    // views(post) {
+    //   return View.findOne({ postId: post.id }).then(view => view.views);
+    // }
   }
 };
 
