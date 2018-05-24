@@ -5,7 +5,9 @@
   "author": "h.koga.orso <h_koga@orso.jp>",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon ./server.js --exec babel-node"
+    "start": "nodemon ./server.js --exec babel-node",
+    "dev:migrate": "node_modules/.bin/sequelize db:migrate --env development",
+    "dev:rollback": "node_modules/.bin/sequelize db:migrate:undo --env development"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",

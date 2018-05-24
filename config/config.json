@@ -2,7 +2,7 @@
   "development": {
     "username": "root",
     "password": null,
-    "database": "tutorial-apollo",
+    "database": "tutorial_apollo",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
